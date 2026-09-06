@@ -1,0 +1,16 @@
+{
+  "name": "Simple Todo App",
+  "install": "npm install",
+  "terminals": [
+    {
+      "name": "todo-server",
+      "command": "npm start"
+    }
+  ],
+  "ports": [
+    {
+      "name": "Todo web app",
+      "port": 3000
+    }
+  ]
+}
