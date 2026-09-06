@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="app__header">
+        <h1 class="app__title">Todos</h1>
+        <p class="app__subtitle" id="summary">Loading…</p>
+      </header>
+
+      <form class="composer" id="composer" autocomplete="off">
+        <input
+          class="composer__input"
+          id="new-todo"
+          name="title"
+          type="text"
+          placeholder="What needs to be done?"
+          aria-label="New todo title"
+          maxlength="200"
+        />
+        <button class="composer__button" type="submit">Add</button>
+      </form>
+
+      <section class="filters" id="filters">
+        <button class="filters__btn is-active" data-filter="all">All</button>
+        <button class="filters__btn" data-filter="active">Active</button>
+        <button class="filters__btn" data-filter="completed">Completed</button>
+      </section>
+
+      <ul class="list" id="list"></ul>
+
+      <p class="empty" id="empty" hidden>Nothing here yet. Add your first todo above.</p>
+    </main>
+
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>
